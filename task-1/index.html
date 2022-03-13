@@ -4,9 +4,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
   <title>Document</title>
 </head>
 <body>
+  <div id="overlay"></div>
+  <div id="modal">
+    <div id="modal_header">
+      <h2 id="modal_header_title"></h2>
+    </div>
+    <div id="modal_html_text">
+    </div>
+    <div id="modal_footer">
+      <button id="modal_btn">OKAY</button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="text_block">
+      <h1 class="main_title">Lorem ipsum dolor</h1>
+      <p class="main_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste explicabo id ut temporibus, quos quibusdam ab, dignissimos labore officiis quasi, dolorem qui magnam voluptate. Ex illo magni nobis quaerat excepturi. lorem400</p>
+      <button class="btn_alert">Вызвать алерт!</button>
+    </div>
+  </div>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
   
+  addContentToModalAlert("Alert!",
+  `<div>This is a simple alert.</div>
+  <div>with some <b>HTML</b> <i>contents</i></div>`)
+
+  </script>
 </body>
 </html>
