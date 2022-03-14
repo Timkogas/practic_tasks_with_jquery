@@ -1,8 +1,7 @@
 const now = new Date()
-const getCurrentYearNumber = () => {
-  const year = now.getFullYear()
-  return year
-}
+
+const year = now.getFullYear()
+const month = now.getMonth()
 
 const getCurrentMonthString = () => {
   const month = now.getMonth()
@@ -45,17 +44,51 @@ const getCurrentMonthString = () => {
       break;    
   }
 }
-const currentDayOfWeek = () => {
-  const currentDayOfWeek = now.getDay()
-  return currentDayOfWeek
+
+
+const currentDayOfWeek = now.getDay()
+const lastDayOfMonth = new Date(year, month + 1, 0)
+const firstDayOfMonth = new Date(year, month, 1)
+
+
+const renderNamesDaysOfWeekForDatapicker = () => {
+  const days = $(`<div class="datapicker_content_week">
+  <span class='week_names'>ПН</span>
+  <span class='week_names'>ВТ</span>
+  <span class='week_names'>СР</span>
+  <span class='week_names'>ЧТ</span>
+  <span class='week_names'>ПТ</span>
+  <span class='week_names'>СБ</span>
+  <span class='week_names'>ВС</span>
+  </div>`)
+  days.appendTo('.datepicker_content')
 }
-const lastDayOfMonth = () => {
-  const lastDayOfMonth = new Date(year, month + 1, 0)
-  return lastDayOfMonth
-}
-const firstDayOfMonth = () => {
-  const firstDayOfMonth = new Date(year, month, 1)
-  return firstDayOfMonth
+
+const renderDaysOfMonthForDatapicker = () => {
+  let dayTable = 1;
+  while(dayTable < 35) {
+    let dayMonth = 1
+    let firstWeekDays = 0
+    for(let i = 0; i < 5; i++) {
+      for(let i = 0; i < 7; i++) {
+        if (firstWeekDays < firstDayOfMonth.getDay()) {
+          const divWeekSpanEmpty = $('<span></span>')
+          divWeekSpanEmpty.appendTo('.datapicker_content_week')
+          firstWeekDays++
+          dayTable++
+          } else if (dayMonth <= lastDayOfMonth.getDate()) {
+            const divWeekSpanFull = $(`<span class='week_day'>${dayMonth}</span>`)
+            divWeekSpanFull.appendTo('.datapicker_content_week')
+            dayMonth++
+            dayTable++
+          } else {
+            const divWeekSpanEmpty = $('<span></span>')
+            divWeekSpanEmpty.appendTo('.datapicker_content_week')
+            dayTable++
+          }
+        }
+      }
+  }
 }
 
 $('#datepicker_input').on('click', (e) => {
@@ -65,11 +98,18 @@ $('#datepicker_input').on('click', (e) => {
 const datepickerGenerate = () => {
   $(`<p class="datepicker_header_date">
   ${getCurrentMonthString()}, 
-  ${getCurrentYearNumber()}
+  ${year}
   </p>`).appendTo(".datepicker_header")
 
   $('<button class="btn_datapicker next"> > </button>').appendTo(".datepicker_header")
   $('<button class="btn_datapicker prev"> < </button>').prependTo(".datepicker_header")
+
+  renderNamesDaysOfWeekForDatapicker()
+  renderDaysOfMonthForDatapicker()
 }
+
+$('#next').on('click', (e)=>{
+  
+})
 
 

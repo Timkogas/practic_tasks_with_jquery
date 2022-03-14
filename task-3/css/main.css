@@ -11,11 +11,14 @@ body {
 }
 .datepicker_block {
   position: absolute;
+  top: 60px;
   left: 69px;
-  width: 200px;
-  height: 300px;
-  background-color: red;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
   display: none;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 14px 3px rgba(34, 60, 80, 0.18);
 }
 .datepicker_header
 {
@@ -23,6 +26,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  font-size: 20px;
+  border-bottom: 0.5px solid rgb(206, 206, 206);;
 }
 .btn_datapicker {
   border: none;
@@ -34,3 +39,28 @@ body {
   font-size: 20px;
   cursor: pointer;
 }
+.datepicker_content {
+  padding: 10px 10px 20px 10px;
+}
+.datapicker_content_week {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 20px;
+}
+.datapicker_content_week span {
+  flex: 14%;
+  text-align: center;
+  padding: 2px;
+}
+.week_day {
+  color: rgb(4, 5, 5);
+  border: 0.5px solid white;
+}
+.week_names {
+  color: rgb(11, 123, 228);
+}
+.week_day:hover {
+  border: 0.5px solid rgb(206, 206, 206);
+}
+
