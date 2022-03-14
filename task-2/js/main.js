@@ -1,9 +1,11 @@
+const activeTabs = (container) => {
 $('.content-item').first().show()
-$('.item').first().addClass("active")
-$('.item').on('click', function() {
+$(`${container}`).find('.item').eq(0).addClass("active")
+$(`${container}`).first().on('click', '.item', function() {
   $('.item').removeClass("active")
   $(this).addClass('active')
   const contentID = $(this).attr('href')
   $('.content-item').hide()
   $(`${contentID}`).show()
 })
+}
