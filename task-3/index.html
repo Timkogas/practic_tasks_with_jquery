@@ -13,11 +13,21 @@
     <input type="text" name="" id="datepicker_input">
   </div>
   <div class="datepicker_block">
-    <div class="datepicker_header"></div>
+    <div class="datepicker_header">
+      <button class="btn_datapicker" id="prev">&#60;</button>
+      <div class="datepicker_header_date"></div>
+      <button class="btn_datapicker" id="next">&#62;</button>
+    </div>
     <div class="datepicker_content"></div>
   </div>
+
+
   <script src="js/jquery-3.6.0.min.js"></script>
   <script src="js/main.js"></script>
-  <script>datepickerGenerate()</script>
+  <script>
+  datepickerGenerate()
+  </script>
+  <script src="js/buttons-logic.js"></script>
+
 </body>
 </html>
