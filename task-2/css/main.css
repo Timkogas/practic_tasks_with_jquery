@@ -10,12 +10,13 @@
   border: 0.5px solid rgb(185, 185, 185);
   border-radius: 5px;
 }
-#tabs {
+.tabs {
   margin-bottom: 15px;
   border-bottom: 0.5px solid rgb(185, 185, 185);
-  display: flex;
+  padding: 10px 10px 9px 10px;
 }
 .item {
+  color: rgb(43, 139, 248);
   margin-right: 5px;
   padding: 10px 20px;
   border: 0.5px solid rgb(185, 185, 185);
@@ -29,6 +30,6 @@
 }
 .active {
   color: black;
-  background-color: white;
+  border-bottom: 1px solid white
 }
 
