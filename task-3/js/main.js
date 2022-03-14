@@ -63,7 +63,13 @@ $('#datepicker_input').on('click', (e) => {
 })
 
 const datepickerGenerate = () => {
-  $(`<p class="datepicker_header_month">${getCurrentMonthString()}</p>`).appendTo(".datepicker_header")
+  $(`<p class="datepicker_header_date">
+  ${getCurrentMonthString()}, 
+  ${getCurrentYearNumber()}
+  </p>`).appendTo(".datepicker_header")
+
+  $('<button class="btn_datapicker next"> > </button>').appendTo(".datepicker_header")
+  $('<button class="btn_datapicker prev"> < </button>').prependTo(".datepicker_header")
 }
 
 

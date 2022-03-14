@@ -17,3 +17,20 @@ body {
   background-color: red;
   display: none;
 }
+.datepicker_header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.btn_datapicker {
+  border: none;
+  height: 30px;
+  width: 30px;
+  background-color: rgb(206, 206, 206);
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+}
