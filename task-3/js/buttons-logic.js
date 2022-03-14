@@ -25,7 +25,7 @@
     $('.week_day').removeClass("active")
     $(this).addClass('active')
     const day = $(this).text()
-    const dayNumber = parseInt(day)
+    const dayNumber = parseInt(day)+1
     const choiseDate = now.setDate(dayNumber)
     const DateString = new Date(choiseDate)
     const DateToShowInInput = DateString.toISOString().split('T')[0]
