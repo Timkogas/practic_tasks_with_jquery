@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#tab_container {
+  margin-left: 15px;
+  margin-top: 20px;
+  padding: 15px;
+  width: 700px;
+  border: 0.5px solid rgb(185, 185, 185);
+  border-radius: 5px;
+}
+#tabs {
+  margin-bottom: 15px;
+  border-bottom: 0.5px solid rgb(185, 185, 185);
+  display: flex;
+}
+#item {
+  margin-right: 5px;
+  padding: 10px 20px;
+  border: 0.5px solid rgb(185, 185, 185);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: none;
+  text-decoration: none;
+}
+.content-item {
+  display: none;
+}
+#content1 {
+  display: block
+}
