@@ -64,7 +64,7 @@ const renderDaysOfMonthForDatapicker = () => {
   let dayMonth = 1
   let firstWeekDays = 0
   let countEmptyDays = firstDayOfMonth.getDay()-1
-  if (firstDayOfMonth.getDay() === 0) {
+  if (firstDayOfMonth.getDay() === 0) {  /* Если месяц начинается на воскресенье */
     countEmptyDays = 6
   }
   for(let i = 0; i < 42; i++) {
@@ -87,11 +87,6 @@ const renderDaysOfMonthForDatapicker = () => {
 $('#datepicker_input').on('click', (e) => {
   $('.datepicker_block').toggle()
 })
-
-
-
-
-
 const datepickerGenerate = () => {
   $(`<p class="datepicker_header_date">
   ${getCurrentMonthString()}, 

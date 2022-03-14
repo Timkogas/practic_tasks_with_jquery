@@ -21,7 +21,15 @@
     datepickerGenerate()
   })
 
-  $('.week_day').on('click', function() {
+  $('.datepicker_content').on('click', ".week_day",  function() {
     $('.week_day').removeClass("active")
     $(this).addClass('active')
-  })
+    const day = $(this).text()
+    const dayNumber = parseInt(day)
+    const choiseDate = now.setDate(dayNumber)
+    const DateString = new Date(choiseDate)
+    const DateToShowInInput = DateString.toISOString().split('T')[0]
+    $('input').val(DateToShowInInput)
+   })
+
+  
