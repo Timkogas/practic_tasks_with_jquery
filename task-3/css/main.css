@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 30px
+}
+#datepicker_input {
+  height: 25px
+}
+.datepicker_block {
+  position: absolute;
+  left: 69px;
+  width: 200px;
+  height: 300px;
+  background-color: red;
+  display: none;
+}
