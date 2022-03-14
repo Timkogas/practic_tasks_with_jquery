@@ -15,7 +15,7 @@
   border-bottom: 0.5px solid rgb(185, 185, 185);
   display: flex;
 }
-#item {
+.item {
   margin-right: 5px;
   padding: 10px 20px;
   border: 0.5px solid rgb(185, 185, 185);
@@ -27,6 +27,8 @@
 .content-item {
   display: none;
 }
-#content1 {
-  display: block
+.active {
+  color: black;
+  background-color: white;
 }
+
